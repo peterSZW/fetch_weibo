@@ -76,7 +76,7 @@ func get_friend(uid string) ([]string, bool, error) {
 
 func get_timeline(uid string) (bool, error) {
 	_, overload, err := get_url(
-		"/2/statuses/user_timeline.json?uid=" + uid,
+		"/2/statuses/user_timeline.json?count=100&feature=1&uid=" + uid,
 		"timeline_go/" + uid,
 	)
 

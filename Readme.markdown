@@ -33,6 +33,8 @@ appkey需要在新浪申请一个应用，cookies在浏览器里找到新浪微�
 ### 3. 下载并运行代码
 
 	git clone https://github.com/wb14123/fetch_weibo.git
+	cd fetch_weibo
+	mkdir timeline_go friend_go
 	go run fetch_weibo.go
 
 程序会把用户的timeline放入`timeline_go`文件夹，文件名为用户uid。把用户的friend关系放入`friend_go`文件夹，文件名也是用户uid。

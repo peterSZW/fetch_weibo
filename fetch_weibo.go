@@ -142,5 +142,5 @@ func get_all(errorTimes int, errorWait int, overloadWait int, total int) error {
 }
 
 func main() {
-	get_all(50, 1, 10, 1)
+	get_all(50, 1, 10, 10000)
 }

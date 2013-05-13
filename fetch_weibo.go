@@ -59,7 +59,7 @@ func get_url(url_path string, file_path string) (map[string]interface{}, bool, e
 
 func get_friend(uid string) ([]string, bool, error) {
 	item, overload, err := get_url(
-		"/2/friendships/friends/bilateral/ids.json?uid=" + uid,
+		"/2/friendships/friends/bilateral/ids.json?count=2000&uid=" + uid,
 		"friend_go/" + uid,
 	)
 
@@ -124,10 +124,7 @@ func get_all(errorTimes int, errorWait int, overloadWait int, total int) error {
 			} else {
 				q = q[1:]
 				num++
-				for j, u := range users {
-					if (j > 10) {
-						break
-					}
+				for _, u := range users {
 					if (!user_exist(u)) {
 						q = append(q, u)
 					}
